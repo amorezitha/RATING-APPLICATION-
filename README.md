@@ -1,1 +1,2 @@
-Department application that rate according to the service receive by employee
+A Rating App is a web application score, based on user feedback and reviews, to indicate it's overall quality and user satisfaction. 
+

@@ -1,0 +1,44 @@
+import { useStars } from 'RATING-APPLICATION'
+
+const config = {
+    totalStars: 5,
+    initialSelectedValue: 2,
+    renderFull: '★',
+    renderEmpty: '☆',
+  };
+
+const {
+    stars,
+    getStarProps,
+    getStarWrapperProps,
+    isSelecting,
+    selectingValue,
+    selectedValue,
+  } = useStars(config);
+
+             <span
+              {...getStarWrapperProps({
+                style: {
+                  cursor: 'pointer',
+                  display: 'inline-block'
+                },
+              })}
+            >
+              {stars?.map((star, i) => (
+                <span
+                  key={i}
+                  {...getStarProps(i, {
+                    style: {
+                      fontSize: '40px',
+                      display: 'inline-block'
+                    },
+                    onClick: (event, ratedValue) => {
+                      console.log(`You just rated ${ratedValue} Stars!!`);
+                    },
+                  })}
+                >
+                  {star}
+                </span>
+              ))}
+            </span>
+
