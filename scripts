@@ -1,0 +1,34 @@
+import React from 'react'
+
+import { StarsRating } from "RATING-APPLICATION-";
+
+function Example() {
+
+  const config = {
+    totalStars: 5,
+    initialSelectedValue: 4.5,
+    renderFull: (
+      <img src="https://img.icons8.com/ios-filled/50/000000/star--v1.png" />
+    ),
+    renderEmpty: (
+      <img src="https://img.icons8.com/ios/50/000000/star--v1.png" />
+    ),
+    renderHalf: (
+      <img src="https://img.icons8.com/ios-filled/50/000000/star-half-empty.png" />
+    )
+  };
+
+     <StarsRating config={config}
+       onStarsRated={(value) => {
+        alert(`${value} stars rated`);
+      }}
+      onSelecting={(isSelecting, selectingValue) => {
+        console.log(isSelecting, selectingValue)
+      }} 
+    />
+
+    return  <StarsRating config={config} />
+
+}
+
+export default Example
