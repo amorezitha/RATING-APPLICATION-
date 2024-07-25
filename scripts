@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { StarsRating } from "RATING-APPLICATION-";
+import { StarsRating } from "react RATING-APPLICATION-";
 
 function Example() {
 
